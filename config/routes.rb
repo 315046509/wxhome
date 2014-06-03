@@ -1,5 +1,15 @@
 Weixin::Application.routes.draw do
   root :to => "main#index"
+  resources :services
+  resources :abouts
+  resources :cases
+  resources :contact
+  resources :questions
+  resources :weixin do
+    collection do
+      get 'contrast'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

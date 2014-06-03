@@ -1,3 +1,16 @@
+<body id="index">
+<header>
+  <div class="wrapper">
+    <h1 class="logo">
+      <a href="http://www.028studio.com/" title="长春朋兴微管家">
+        <img src="http://www.028studio.com/templets/default/img/logo.png" width="214" height="60" alt="长春朋兴微管家">
+      </a>
+    </h1>
+    <nav>
+      <%= render "comment/menu" %>
+    </nav>
+  </div>
+</header>
 <section id="banner">
   <ul id="banner_img">
     <li style="display: block;">
@@ -8,7 +21,7 @@
           <p style="padding-top: 0px; padding-bottom: 0px;">智能手机、平板电脑<br>
             2014您的网站触手可及了吗？
           </p>
-          <a href="http://weixin.028studio.com/" target="_blank">点击查看详情&gt;</a>
+          <a href="<%= weixin_index_path %>" target="_blank">点击查看详情&gt;</a>
         </div>
         <div style="right: 10px; opacity: 1;" class="ad_img">
           <img src="images/banner1.png" alt="微站时代来临" height="393" width="753">
@@ -189,7 +202,8 @@
       </ul>
     </div>
     <div id="newsbox">
-      <h2 class="cat_title"><span><a href="http://www.028studio.com/028/Questions/" class="more">MORE+</a></span>常见问题
+      <h2 class="cat_title"><span><a href="<%= questions_path %>" class="more">MORE+</a></span>
+        <a href="<%= questions_path %>" title="常见问题">常见问题</a>
       </h2>
       <ul>
         <li>
@@ -231,5 +245,6 @@
   </div>
   <div class="clear"></div>
 </section>
+</body>
 <%= render "comment/footer" %>
 
