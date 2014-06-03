@@ -2,36 +2,130 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=gbk">
-  <title>成都网络公司|成都网站设计|成都网站制作|成都网页设计公司-零二八</title>
-  <meta name="description" content="成都零二八网站建设公司:专注于成都网站建设,成都网站制作,成都网站设计,成都网页制作,成都网页设计等一体化的成都网络公司.零二八以最低的价格为您提供最优质服务!">
-  <meta name="keywords" content="成都网站制作,成都网站设计,成都网页设计,成都网页制作,成都网络公司,成都网站建设,成都网站建设公司,成都网站设计公司,成都网站制作公司">
+  <title>长春朋兴微管家|长春微信|长春微官网|长春网站设计|长春网站制作|长春网页设计公司-朋兴传媒|www.pxwgj.com</title>
+  <meta name="description" content="长春朋兴文化传媒有限公司:专注于长春微信,长春微官网开发,长春网站开发,长春网站设计,长春网页制作,长春网页设计等一体化的文化传媒公司.朋兴传媒以最低的价格为您提供最优质服务!">
+  <meta name="keywords" content="长春微信,长春微官网,长春网站制作,长春网站设计,长春网页设计,长春传媒公司,长春文化传媒,长春朋兴文化传媒,长春朋兴传媒,长春朋兴微信,长春朋兴微官网,长春朋兴微管家,
+  长春朋兴网站建设,长春朋兴网站建设公司,长春朋兴网站设计公司,朋兴网站制作公司,朋兴微信,朋兴微官网,朋兴微管家,www.pxwgj.com">
 
   <link rel="shortcut icon" href="http://www.028studio.com/favicon.ico" type="image/x-icon">
   <!--[if lt IE 9]>
-  <script type="text/javascript" src="http://www.028studio.com/templets/default/js/html5.js"></script><![endif]-->
+  <script type="text/javascript" src="http://www.028studio.com/templets/default/js/html5.js"></script>
+  <![endif]-->
 
   <%= stylesheet_link_tag "style" %>
   <%= javascript_include_tag "4713898", "jquery", "jquery-1" %>
 </head>
 <body id="index">
-
-<div class="wrapper">
-  <h1 class="logo">
-    <a href="http://www.028studio.com/" title="成都网络公司"><img src="images/logo.png" alt="成都网络公司" height="60" width="214"></a>
-  </h1>
-  <nav>
-    <ul>
-      <li style="opacity: 1;" class="home hover"><a href="http://www.028studio.com/" title="成都网络公司">首页</a></li>
-
-      <li style="opacity: 1;" class="nav1"><a href="http://www.028studio.com/028/ABOUT/" title="关于">关于</a></li>
-      <li style="opacity: 1;" class="nav2"><a href="http://www.028studio.com/028/SERVICES/" title="服务">服务</a></li>
-      <li style="opacity: 1;" class="nav3"><a href="http://www.028studio.com/028/CASES/" title="案例">案例</a></li>
-      <li style="opacity: 1;" class="nav4"><a href="http://www.028studio.com/028/CONTACT/" title="联系方式">联系方式</a></li>
-    </ul>
-  </nav>
-</div>
+<header>
+  <div class="wrapper">
+    <h1 class="logo">
+      <a href="http://www.028studio.com/" title="成都网络公司">
+        <img src="http://www.028studio.com/templets/default/img/logo.png" width="214" height="60" alt="成都网络公司">
+      </a>
+    </h1>
+    <nav>
+      <ul>
+        <li class="home hover" style="opacity: 1; background-position-y: -37px;">
+          <a href="http://www.028studio.com/" title="成都网络公司">首页</a></li>
+        <li class="nav1" style="opacity: 1; background-position-y: -37px;">
+          <a href="http://www.028studio.com/028/ABOUT/" title="关于">关于</a></li>
+        <li class="nav2" style="opacity: 1; background-position-y: -37px;">
+          <a href="http://www.028studio.com/028/SERVICES/" title="服务">服务</a></li>
+        <li class="nav3" style="opacity: 1; background-position-y: -37px;">
+          <a href="http://www.028studio.com/028/CASES/" title="案例">案例</a></li>
+        <li class="nav4"><a href="http://www.028studio.com/028/CONTACT/" title="联系方式">联系方式</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <%= yield %>
 
+<script type="text/javascript" src="javascripts/jquery-1.js"></script>
+<script type="text/javascript" src="javascripts/jquery.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src=http://www.028studio.com/templets/default/js/killie6.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    //<![CDATA[
+    //    首页
+    $('.ad_img,#banner_ctr,.logo').pngFix();
+    //Banner Start
+    var curIndex = 0;
+    var time = 800;
+    var slideTime = 5000;
+    var adTxt = $("#banner_img>li>div>.ad_txt");
+    var adImg = $("#banner_img>li>div>.ad_img");
+    var int = setInterval("autoSlide()", slideTime);
+
+    $("#banner_ctr>ul>li[class!='first-item'][class!='last-item']").click(function () {
+        show($(this).index("#banner_ctr>ul>li[class!='first-item'][class!='last-item']"));
+        window.clearInterval(int);
+        int = setInterval("autoSlide()", slideTime);
+    });
+
+    function autoSlide() {
+        curIndex + 1 >= $("#banner_img>li").size() ? curIndex = -1 : false;
+        show(curIndex + 1);
+    }
+    function show(index) {
+        $.easing.def = "easeOutQuad";
+        $("#drag_ctr,#drag_arrow").stop(false, true).animate({left: index * 24 + 6}, 300);
+        $("#banner_img>li").eq(curIndex).stop(false, true).fadeOut(time);
+        adTxt.eq(curIndex).stop(false, true).animate({top: "340px"}, time);
+        adImg.eq(curIndex).stop(false, true).animate({right: "120px"}, time);
+        setTimeout(function () {
+            $("#banner_img>li").eq(index).stop(false, true).fadeIn(time);
+            adTxt.eq(index).children("p").css({paddingTop: "50px", paddingBottom: "50px"}).stop(false, true).animate({paddingTop: "0", paddingBottom: "0"}, time);
+            adTxt.eq(index).css({top: "0", opacity: "0"}).stop(false, true).animate({top: "110px", opacity: "1"}, time);
+            adImg.eq(index).css({right: "-50px", opacity: "0"}).stop(false, true).animate({right: "10px", opacity: "1"}, time);
+        }, 200)
+        curIndex = index;
+    }
+    //Banner End
+    //Cases Start
+    $("#caseslist>.cases>li").live({mouseenter: function () {
+        $("p", this).stop(false, true).slideDown("normal", "easeOutQuad");
+    }, mouseleave: function () {
+        $("p", this).stop(false, true).slideUp("normal", "easeOutQuad");
+    }});
+    $("#caseslist>.cases>li>img,#newsbox>ul>li>a>img").lazyload({effect: "fadeIn", failurelimit: 10});
+    //Cases End
+    //nav start
+    (function () {
+        var nav = $("#service ul");
+        var lis = nav.children("li");
+        var arrow = $(".arrow").css("left");
+        var speed = 300;
+        var n = 0;
+        //取cur位置
+        for (var i = 0; i < lis.length; i++) {
+            if (lis.eq(i).attr("class") == "cur") {
+                n = i;
+            }
+        }
+        lis.eq(0).hover(function () {
+            $(".arrow").stop(true, true).animate({left: "0px"}, speed);
+            lis.removeClass("cur");
+            $(this).addClass("cur");
+        })
+        lis.eq(1).hover(function () {
+            $(".arrow").stop(true, true).animate({left: "370px"}, speed);
+            lis.removeClass("cur");
+            $(this).addClass("cur");
+        })
+        lis.eq(2).hover(function () {
+            $(".arrow").stop(true, true).animate({left: "738px"}, speed);
+            lis.removeClass("cur");
+            $(this).addClass("cur");
+        })
+        nav.mouseleave(function () {
+            $(".arrow").stop(true, true).animate({left: arrow}, speed);
+            lis.removeClass("cur");
+            lis.eq(n).addClass("cur");
+        })
+    }())
+    //]]>
+</script>
 </body>
 </html>
