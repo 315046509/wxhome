@@ -1,4 +1,5 @@
 Weixin::Application.routes.draw do
+  get "main/index"
   root :to => "main#index"
   resources :services
   resources :abouts
@@ -8,6 +9,18 @@ Weixin::Application.routes.draw do
   resources :weixin do
     collection do
       get 'contrast'
+    end
+  end
+  resources :news
+  #admin
+  namespace :admin do
+    match '' => 'main#index', :via => :get
+    match '/login' => 'main#login', :via => :get
+    match '/logout' => 'main#logout', :via => :get
+    resources :main do
+      collection do
+        post 'check_login'
+      end
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

@@ -28,6 +28,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'execjs'
 gem 'therubyracer'
+# 分页
+gem 'kaminari', '0.14.1'
+# 图片插件
+gem "rmagick", '2.13.2', :require => "RMagick"
+gem 'paperclip', '3.5.1'
+gem 'ckeditor'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
