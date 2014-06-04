@@ -2,7 +2,10 @@
 <header>
   <div class="wrapper">
     <h1 class="logo">
-      <a href="http://www.028studio.com/028/NEWS/" title=""><img src="../images/logo_5.png" width="127" height="128" alt=""><strong>新闻中心</strong><span>NEWS</span></a>
+      <a href="<%= cases_path %>" title="">
+        <img src="../images/logo_3.png" width="127" height="128" alt=""/>
+        <strong>案例</strong><span>CASES</span>
+      </a>
     </h1>
     <nav>
       <%= render "comment/menu" %>
@@ -10,38 +13,23 @@
   </div>
 </header>
 <!-- /header -->
-<section id="content">
+<section id="show_cases">
   <div class="wrapper">
-    <br/>
-    <br/>
+    <h1 id="title">
+      <span>UPTATED:<%= my_time_format @roll.created_at %>
+        <a href="<%= cases_path %>" title="朋兴帮您解决烦恼">返回列表</a>
+      </span>
+      <%= @roll.title %>
+    </h1>
 
-    <div class="contentbar">
-      <article>
-        <h1 id="title">
-          <span>UPTATED:<%= my_time_format @journalism.created_at %>
-            <a href="<%= news_index_path %>" title="新闻中心">返回列表</a>
-          </span>
-          <%= @journalism.title %>
-        </h1>
-
-        <div id="info">
-          <p>
-            <%= @journalism.description.html_safe %>
-          </p>
-        </div>
-      </article>
+    <div id="detailed">
+      <ul>
+        <li><%= image_tag @roll.avatar.url(:zhengchang) %></li>
+        <li>名称：<%= @roll.title %></li>
+        <li>时间：<%= my_time_format @roll.created_at %></li>
+        <li>说明：<%= @roll.content %></li>
+      </ul>
     </div>
-    <div class="sidebar">
-      <h3 class="cat_title">您可能感兴趣的！</h3>
-      <% @journalisms.each do |q| %>
-          <h5>
-            <a href="<%= news_path(q) %>" title="<%= q.title %>">
-              <%= link_to q.title, news_path(q) %>
-            </a>
-          </h5>
-      <% end %>
-    </div>
-    <div class="clear"></div>
   </div>
 </section>
 <footer>

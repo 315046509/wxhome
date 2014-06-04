@@ -58,31 +58,43 @@
             $("#classic_cases").validate({
                 rules: {
                     "case[title]": {
-                        required: true
+                        required: true,
+                        rangelength: [1, 20]
                     },
                     "case[avatar]": {
                         required: true,
                         accept: "jpg|png"
                     },
                     "case[content]": {
-                        required: true
+                        required: true,
+                        rangelength: [1, 200]
                     }
                 },
                 messages: {
                     "case[title]": {
-                        required: "请填写案例标题"
+                        required: "请填写案例标题",
+                        rangelength: "标题长度为1~20"
                     },
                     "case[avatar]": {
                         required: "请上传图片",
                         accept: "图片类型必须是png或jpg"
                     },
                     "case[content]": {
-                        required: "请填写案例详细"
+                        required: "请填写案例详细",
+                        rangelength: "内容长度为1~200"
                     }
+                },
+                errorClass: "error",
+                highlight: function (element, errorClass) {
+                    $(element).parent().parent().addClass(errorClass);
+                },
+                unhighlight: function (element, errorClass) {
+                    $(element).parent().parent().removeClass(errorClass);
                 },
                 errorPlacement: function (error, element) {
                     error.appendTo(element.parent());
-                }
+                },
+                errorElement: "span"
             });
         });
     });

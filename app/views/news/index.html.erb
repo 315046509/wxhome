@@ -15,164 +15,36 @@
     <div class="contentbar">
       <div id="newslist">
         <ul class="news">
-          <li>
+          <% @journalisms.each do |q| %>
+              <li>
+                <div class="newslist">
+                  <a href="<%= news_path(q) %>" title="<%= q.title %>"><%= q.title %></a>
+                  <span>UPTATED:<%= my_time_format q.created_at %></span>
 
-            <div class="newslist">
-              <a href="http://www.028studio.com/028/NEWS/284.html" title="2014年五一节放假通知">2014年五一节放假通知</a>
-              <span>UPTATED:2014-04-28</span>
-
-              <p>2014年五一节放假安排： 2014年5月1日至2014年5月3日放假3天，2014年5月4日（周日）上班 。 由此给客户朋友们带来的不便，敬请谅解！
-                如有紧急事宜请直电：13540281588、13608214257 。</p>
-            </div>
-            <div class="clear"></div>
-          </li>
-          <li>
-
-            <div class="newslist">
-              <a href="http://www.028studio.com/028/NEWS/283.html" title="招聘：DIV+CSS+JQ 前端开发">招聘：DIV+CSS+JQ 前端开发</a>
-              <span>UPTATED:2014-04-28</span>
-
-              <p>岗位职责： 1、负责PSD切片、DIV+CSS编写、JS/JQ嵌套； 2、负责网站内容添加、内容更新、修改等工作； 任职资格： 1、精通Photoshop\Dreamweaver等设计软件；
-                2、熟悉jQuery框架 3、了解seo，对页面有一定的SEO优化能力 4、精通DIV+CSS网页布局 工作时间： 周...</p>
-            </div>
-            <div class="clear"></div>
-          </li>
-          <li>
-
-            <div class="newslist">
-              <a href="http://www.028studio.com/028/NEWS/281.html" title="028微站平台-优先推出刮刮卡积分抽奖">028微站平台-优先推出刮刮卡积分抽奖</a>
-              <span>UPTATED:2014-04-16</span>
-
-              <p>自从前段时间028微站平台积分兑换礼品上线后，此功能大受伙伴们好评，客户的使用也越来越普及了，大部分的应用场景是商家现场促销活动后吸纳了大量的关注量和微会员，后续推出商城购物换取会员积分、一战到底等活动吸引会员参加从而获得积分，并通过设定消费...</p>
-            </div>
-            <div class="clear"></div>
-          </li>
-          <li>
-
-            <div class="newslist">
-              <a href="http://www.028studio.com/028/NEWS/279.html" title="028微站平台-DIY投票系统正式上线">028微站平台-DIY投票系统正式上线</a>
-              <span>UPTATED:2014-04-12</span>
-
-              <p>一、新增文字投票系统和图片投票系统 二、应用场景：婚纱、会议主题、商品好评、明星评</p>
-            </div>
-            <div class="clear"></div>
-          </li>
-          <li>
-
-            <div class="newslist">
-              <a href="http://www.028studio.com/028/NEWS/278.html" title="2014年清明节放假通知">2014年清明节放假通知</a>
-              <span>UPTATED:2014-04-03</span>
-
-              <p>2014年清明节放假安排： 2014年4月5日至2014年4月7日放假3天，2014年4月8日（周二）上班 。 由此给客户朋友们带来的不便，敬请谅解！
-                如有紧急事宜请直电：13540281588、13608214257 。</p>
-            </div>
-            <div class="clear"></div>
-          </li>
-          <li>
-
-            <div class="newslist">
-              <a href="http://www.028studio.com/028/NEWS/276.html" title="028微信平台正式启动">028微信平台正式启动</a>
-              <span>UPTATED:2014-02-27</span>
-
-              <p>经历了半年的筹备，现028正式推出028微信平台。 即日起至2014-03-31，凡购买此项（任意版本）服务的即可享受6折优惠！
-                为适应各行业、企业客户的需求，我方推出的028微信平台分为三个版本：标准版、钻石版、行业版。 标准版：适合所有企业开启 钻石版：7项独...</p>
-            </div>
-            <div class="clear"></div>
-          </li>
-          <li>
-            <div class='pic'><a href='http://www.028studio.com/028/NEWS/275.html' target='_blank'>
-              <img src='./images/15535J952-0-lp.jpg' data-original='http://www.028studio.com/uploads/allimg/140312/15535J952-0-lp.jpg'/></a>
-            </div>
-            <div class="newslist">
-              <a href="http://www.028studio.com/028/NEWS/275.html" title="028全体同仁祝您元宵节 / 情人节快乐！">028全体同仁祝您元宵节 /
-                情人节快乐！</a>
-              <span>UPTATED:2014-02-14</span>
-
-              <p>028全体同仁祝您元宵节 / 情人节快乐！</p>
-            </div>
-            <div class="clear"></div>
-          </li>
-          <li>
-
-            <div class="newslist">
-              <a href="http://www.028studio.com/028/NEWS/274.html" title="你好，2014">你好，2014</a>
-              <span>UPTATED:2014-02-10</span>
-
-              <p>日新月异的科技和优秀的设计一直在改变着我们的生活，从中获得喜悦和满足，是我们创立028的原点。
-                2013年，我和小伙伴们继续专注于成都地区的企业互联网品牌业务。我们参与不同企业的品牌网站初建、改版及推广，在见证客户团队成长的同时，累积着对不同行业和...</p>
-            </div>
-            <div class="clear"></div>
-          </li>
-          <li>
-
-            <div class="newslist">
-              <a href="http://www.028studio.com/028/NEWS/273.html" title="2014年春节放假通知">2014年春节放假通知</a>
-              <span>UPTATED:2014-01-24</span>
-
-              <p>各位尊敬的028用户：
-                值此马年春节即将来临之际，谨向各位新老客户及广大朋友拜个早年！在此特别感谢广大用户在过去一年里对我公司的关注与支持，客户的满意是我们最大的目标，在新的一年里，我们将会一如既往地为大家提供更优质的产品和服务！
-                为了让公司全...</p>
-            </div>
-            <div class="clear"></div>
-          </li>
-          <li>
-
-            <div class="newslist">
-              <a href="http://www.028studio.com/028/NEWS/272.html" title="2014年元旦放假安排">2014年元旦放假安排</a>
-              <span>UPTATED:2013-12-31</span>
-
-              <p>2014年元旦放假安排： 2014年1月1日至2014年1月5日放假5天，2014年1月6日（周一）上班 。 由此给客户朋友们带来的不便，敬请谅解！
-                如有紧急事宜请直电：13540281588、13608214257 。</p>
-            </div>
-            <div class="clear"></div>
-          </li>
+                  <p><%= truncate_u(q.description, 30).html_safe %></p>
+                </div>
+                <div class="clear"></div>
+              </li>
+          <% end %>
         </ul>
       </div>
-      <div class="pager"><a href='list_5_1.html'>首页</a>
-        <span class="current">1</span>
-        <a href='list_5_2.html'>2</a>
-        <a href='list_5_3.html'>3</a>
-        <a href='list_5_4.html'>4</a>
-        <a href='list_5_5.html'>5</a>
-        <a href='list_5_6.html'>6</a>
-        <a class='next' href='list_5_2.html'>下一页</a>
-        <a href='list_5_6.html'>末页</a>
-        <span class="disabled">共 6页54条</span>
+      <div class="pager">
+        <div class="pagination pagination-centered">
+          <ul>
+            <%= paginate @journalisms %>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="sidebar">
       <h3 class="cat_title"><a href="<%= cases_path %>" title="案例">· 案例</a></h3>
-
-      <h5><a href="http://www.028studio.com/028/CASES/87.html" title="四川中喻建设集团有限公司">四川中喻建设集团有限公司</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/86.html" title="爱恋珠宝">爱恋珠宝</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/85.html" title="优筑科技住宅">优筑科技住宅</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/83.html" title="亨利与薇薇安">亨利与薇薇安</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/88.html" title="燕园考研">燕园考研</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/82.html" title="金立方珠宝">金立方珠宝</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/84.html" title="金丝楠乌木博物馆">金丝楠乌木博物馆</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/79.html" title="四川方略工程管理咨询有限公司">四川方略工程管理咨询有限公司</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/81.html" title="青城山味江陵园">青城山味江陵园</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/76.html" title="红酒名庄第一品牌网中秋改版">红酒名庄第一品牌网中秋改版</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/75.html" title="广田华南装饰">广田华南装饰</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/280.html" title="成都金汀金属制品有限公司">成都金汀金属制品有限公司</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/74.html" title="婴爱成长">婴爱成长</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/77.html" title="英中财商教育咨询(成都)有限公司">英中财商教育咨询(成都)有限公司</a></h5>
-
-      <h5><a href="http://www.028studio.com/028/CASES/72.html" title="嘉盛材料有限公司">嘉盛材料有限公司</a></h5>
-
+      <% @roll.each do |roll| %>
+          <h5>
+            <a href="<%= case_path(roll) %>" title="<%= roll.title %>">
+              <%= roll.title %>
+            </a>
+          </h5>
+      <% end %>
     </div>
   </div>
 </section>

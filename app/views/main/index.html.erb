@@ -176,29 +176,14 @@
   <div class="newsdata">
     <div class="questionlist">
       <h2 class="cat_title"><span><a href="<%= news_index_path %>" class="more">MORE+</a></span>新闻中心</h2>
-
-      <div class="clear"></div>
       <ul>
-        <li><a href="http://www.028studio.com/028/NEWS/288.html" title="2014年端午节放假通知" target="_blank">· 2014年端午节放假通知</a>
-        </li>
-        <li><a href="http://www.028studio.com/028/NEWS/284.html" title="2014年五一节放假通知" target="_blank">· 2014年五一节放假通知</a>
-        </li>
-        <li><a href="http://www.028studio.com/028/NEWS/283.html" title="招聘：DIV+CSS+JQ 前端开发" target="_blank">·
-          招聘：DIV+CSS+JQ 前端开发</a></li>
-        <li><a href="http://www.028studio.com/028/NEWS/281.html" title="028微站平台-优先推出刮刮卡积分抽奖" target="_blank">·
-          028微站平台-优先推出刮刮卡积分抽奖</a></li>
-        <li><a href="http://www.028studio.com/028/NEWS/279.html" title="028微站平台-DIY投票系统正式上线" target="_blank">·
-          028微站平台-DIY投票系统正式上线</a></li>
-        <li><a href="http://www.028studio.com/028/NEWS/278.html" title="2014年清明节放假通知" target="_blank">· 2014年清明节放假通知</a>
-        </li>
-        <li><a href="http://www.028studio.com/028/NEWS/276.html" title="028微信平台正式启动" target="_blank">· 028微信平台正式启动</a>
-        </li>
-        <li><a href="http://www.028studio.com/028/NEWS/275.html" title="028全体同仁祝您元宵节 / 情人节快乐！" target="_blank">·
-          028全体同仁祝您元宵节 / 情人节快乐！</a></li>
-        <li><a href="http://www.028studio.com/028/NEWS/274.html" title="你好，2014" target="_blank">· 你好，2014</a></li>
-        <li><a href="http://www.028studio.com/028/NEWS/273.html" title="2014年春节放假通知" target="_blank">· 2014年春节放假通知</a>
-        </li>
-
+        <% @journalisms.each do |q| %>
+            <li>
+              <a href="<%= news_path(q) %>" title="<%= q.title %>" target="_blank">
+                · <%= q.title %>
+              </a>
+            </li>
+        <% end %>
       </ul>
     </div>
     <div id="newsbox">

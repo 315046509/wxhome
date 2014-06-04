@@ -41,7 +41,7 @@
             <tr>
               <td><%= q.id %></td>
               <td><%= q.title %></td>
-              <td><%= truncate_u(q.description.html_safe, 10) %></td>
+              <td><%= truncate_u(q.description, 10).html_safe %></td>
               <td class="center"><%= my_datetime_format q.created_at %></td>
               <td class="center"><%= link_to "查看", admin_journalism_path(q) %></td>
               <td><%= link_to '修改', edit_admin_journalism_path(q) %></td>
