@@ -101,12 +101,9 @@
         <ul class="nav nav-tabs nav-stacked main-menu">
           <li class="nav-header hidden-tablet">导航栏</li>
           <li><%= link_to "<i class=\"icon-home\"></i>首页管理".html_safe %></li>
-          <li><%= link_to "<i class=\"icon-home\"></i>招聘管理".html_safe %></li>
-          <li><%= link_to "<i class=\"icon-home\"></i>简历管理".html_safe %></li>
-          <li><%= link_to "<i class=\"icon-home\"></i>经典案例".html_safe %></li>
-          <li><%= link_to "<i class=\"icon-home\"></i>合作伙伴".html_safe %></li>
-          <li><%= link_to "<i class=\"icon-home\"></i>新闻公告".html_safe %></li>
-          <li><%= link_to "<i class=\"icon-home\"></i>资料仓库".html_safe %></li>
+          <li><%= link_to "<i class=\"icon-home\"></i>经典案例".html_safe, admin_cases_path %></li>
+          <li><%= link_to "<i class=\"icon-home\"></i>新闻公告".html_safe, admin_journalisms_path %></li>
+          <li><%= link_to "<i class=\"icon-home\"></i>问题答疑".html_safe, admin_questions_path %></li>
         </ul>
         <!--yi bu shua xin ye mian-->
         <label id="for-is-ajax" class="hidden-tablet" for="is-ajax"><input id="is-ajax" type="checkbox"/> Ajax on

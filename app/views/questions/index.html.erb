@@ -12,218 +12,38 @@
 </header>
 <!-- /header -->
 <section id="content">
-<div class="wrapper">
-<div class="contentbar">
-  <form name="formsearch" action="http://www.028studio.com/plus/search.php" id="search">
-    <input type="hidden" name="kwtype" value="0">
-    <input type="text" name="q" id="keywords" autocomplete="off" value="在这里搜索..." required="" x-webkit-speech="" x-webkit-grammar="builtin:translate" lang="zh-CN">
-    <input type="submit" id="submit" value="搜 索">
-  </form>
-  <div class="clear"></div>
-  <div class="jiajianlist">
-    <div class="jiajianbox">
-      <h4><em></em>手机网站和普通网站有什么区别呢？</h4>
+  <div class="wrapper">
+    <div class="contentbar">
+      <br/>
+      <% @questions.each do |q| %>
+          <div class="jiajianlist">
+            <div class="jiajianbox">
+              <h4><em></em><%= link_to q.title, question_path(q) %></h4>
+              <ul style="display: block;">
+                <%= truncate_u(q.description, 60).html_safe %>
+              </ul>
+            </div>
+          </div>
+      <% end %>
+      <div class="pager">
+        <div class="pagination pagination-centered">
+          <ul>
+            <%= paginate @questions %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <h3 class="cat_title"><a href="<%= cases_path %>" title="朋兴案例">· 案例</a></h3>
       <ul>
-        1.访问入口不同一般、如果你要上网、你采用的方法觉对是去网吧（相信大部分人是不是在家上网的）
-        但是由于手机的普及和手机上网应用的越来越便捷化，人们对手机上网的频率也越来越高。和传统的上网方式相比、手机上网拥有更便捷的方式，摆脱了时间和空间的...
-        <a href="http://www.028studio.com/028/Questions/282.html" title="手机网站和普通网站有什么区别呢？">MORE+</a>
-
-        <div class="clear"></div>
+        <a href="http://www.028studio.com/028/CASES/87.html" title="四川中喻建设集团有限公司">
+          <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101233120-L.jpg" alt="四川中喻建设集团有限公司" width="200" height="120"></a>
       </ul>
+      <h5><a href="http://www.028studio.com/028/CASES/87.html" title="四川中喻建设集团有限公司">四川中喻建设集团有限公司</a></h5>
     </div>
-    <div class="jiajianbox">
-      <h4 class="on"><em></em>微网站能做什么？</h4>
-      <ul style="display: block;">
-        <a href="<%= questions_path %>" target="_blank"></a>
-        <a href="http://www.028studio.com/028/Questions/176.html" target="_blank">
-          <img src="./images/13423R2Z-0-lp.jpg" data-original="http://www.028studio.com/uploads/allimg/140312/13423R2Z-0-lp.jpg" style="display: block;">
-        </a>展示企业形象
-        微站是企业在移动互联网时代完美展示企业及品牌形象的最佳选择，表现内容丰富、实时更新、形式多样化，保证品牌形象的有效传播！ 互动营销 通过针对企业产品或服务的在线意见反
-        <a href="http://www.028studio.com/028/Questions/176.html" title="微网站能做什么？">MORE+</a>
-
-        <div class="clear"></div>
-      </ul>
-    </div>
-    <div class="jiajianbox">
-      <h4><em></em>为什么需要微站 / 微网站？</h4>
-      <ul>
-        <a href="http://www.028studio.com/028/Questions/175.html" target="_blank"></a>
-        <a href="http://www.028studio.com/028/Questions/175.html" target="_blank">
-          <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140312/13405043C-0-lp.jpg">
-        </a>
-        适合手机访问 移动互联网时代的来临，好比一场随风潜入夜，润物细无声的春雨，悄然改变着我们的生活方式，越来越多人习惯使用手机随时随地上网，如何建立适合手机直接访问、适应移动互联网时代企业宣传的网站？微站来帮你！
-        统一移动互联网入口
-        二维码应用泛... <a href="http://www.028studio.com/028/Questions/175.html" title="为什么需要微站 / 微网站？">MORE+</a>
-
-        <div class="clear"></div>
-      </ul>
-    </div>
-    <div class="jiajianbox">
-      <h4><em></em>WEB APP设计浅谈与方向</h4>
-      <ul>
-        <a href="http://www.028studio.com/028/Questions/94.html" target="_blank"></a>
-        <a href="http://www.028studio.com/028/Questions/94.html" target="_blank">
-          <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/1424004140-0-lp.jpg">
-        </a>
-        WEB&nbsp;APP是一种通过网络（如互联网或内联网）访问的应用程序；也可以指计算机软件承载在浏览器支持环境下或使用浏览器支持语言（如Jjavascript）并依赖于WEB浏览器来渲染的应用程序。
-        <a href="http://www.028studio.com/028/Questions/94.html" title="WEB APP设计浅谈与方向">MORE+</a>
-
-        <div class="clear"></div>
-      </ul>
-    </div>
-    <div class="jiajianbox">
-      <h4><em></em>网站建设还应该注意网站的安全</h4>
-      <ul>
-        <a href="http://www.028studio.com/028/Questions/89.html" target="_blank"></a>
-        <a href="http://www.028studio.com/028/Questions/89.html" target="_blank">
-          <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/141A314X-0-lp.jpg">
-        </a>
-        网站建设过程中，网站的设计/美工、程序功能固然重要；但网站的安全性也应该得到足够的重视！ 不然网站三天两头的出问题，影响网站所属企业或个人形象！
-        028在网站建设过程中充分考虑网站的安全性。如028独立服务器有8G硬件防火墙、360网站安全脚本保护、端口...
-        <a href="http://www.028studio.com/028/Questions/89.html" title="网站建设还应该注意网站的安全">MORE+</a>
-
-        <div class="clear"></div>
-      </ul>
-    </div>
-    <div class="jiajianbox">
-      <h4><em></em>网站建设的服务器空间选择的问题</h4>
-      <ul>所谓网站空间简单的说是网站存放数据的地方，空间小了不够放，空间大了浪费。有的时候，大多客户不知道自己的网站用多大的空间，误以为空间大了，网站的运行数度就会快，网页的打开数度也会快，其实不然。决定的网站打开的数度和您选择的服务器有关系，和您本...
-        <a href="http://www.028studio.com/028/Questions/239.html" title="网站建设的服务器空间选择的问题">MORE+</a>
-
-        <div class="clear"></div>
-      </ul>
-    </div>
-    <div class="jiajianbox">
-      <h4><em></em>网站建设后期维护的重要性</h4>
-      <ul>
-        <a href="http://www.028studio.com/028/Questions/9.html" target="_blank"></a><a href="http://www.028studio.com/028/Questions/9.html" target="_blank">
-        <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/140305/1-140305002R2325.png"></a>成都网络公司领航者成都028认为：企业在选择网络公司设计的的时候，要考虑其的设计水平同时也要考察他们的后期服务方面。因为网站后期的维护非常重要，涉及到客户的利益。设想一下如果前期网站制作的很满意，但后期维护更不上，比如服务器时常荡机，域名绑定...
-        <a href="http://www.028studio.com/028/Questions/9.html" title="网站建设后期维护的重要性">MORE+</a>
-
-        <div class="clear"></div>
-      </ul>
-    </div>
-    <div class="jiajianbox">
-      <h4><em></em>成都做网站设计专业的重要性</h4>
-      <ul>成都网站建设-028网站建设专家认为一个企业网站主要的访问者有几类，即：直接用户、经销商、设备和原材料供应商、竞争者等。
-        前两类访问者是公司的现有用户和潜在用户，也是网站内容应该重点满足的对象。至于供应商，除去那些具备B2B功能的综合性电子商务网站...
-        <a href="http://www.028studio.com/028/Questions/238.html" title="成都做网站设计专业的重要性">MORE+</a>
-
-        <div class="clear"></div>
-      </ul>
-    </div>
-    <div class="jiajianbox">
-      <h4><em></em>成都做网站到底要多少钱呢？</h4>
-      <ul>成都网络公司的领航者028网站建设与您分享：成都做网站到底要多少钱呢？
-        网站承建费用支付，支付标准与支付方式网站建设业内一般采用按制作量记费的方式，譬如按页面数量记费。但网站制作量，如页面数量等，在制作过程中是变化的，所以在签合同的时候无法给出...
-        <a href="http://www.028studio.com/028/Questions/237.html" title="成都做网站到底要多少钱呢？">MORE+</a>
-
-        <div class="clear"></div>
-      </ul>
-    </div>
-    <div class="jiajianbox">
-      <h4><em></em>如何提高网站的效率</h4>
-      <ul>企业网站建成之后，成都网站优化对网站性能的评价将成为了一个重要的任务，网站必须达到预先设计的性能，而且应该尽可能以更高的效率运行，这样为提高网站的访问量打下一个良好的基
-        <a href="http://www.028studio.com/028/Questions/236.html" title="如何提高网站的效率">MORE+</a>
-
-        <div class="clear"></div>
-      </ul>
-    </div>
+    <div class="clear"></div>
   </div>
-  <div class="pager"><a href="http://www.028studio.com/028/Questions/list_6_1.html">首页</a>
-    <span class="current">1</span>
-    <a href="http://www.028studio.com/028/Questions/list_6_2.html">2</a>
-    <a href="http://www.028studio.com/028/Questions/list_6_3.html">3</a>
-    <a href="http://www.028studio.com/028/Questions/list_6_4.html">4</a>
-    <a href="http://www.028studio.com/028/Questions/list_6_5.html">5</a>
-    <a href="http://www.028studio.com/028/Questions/list_6_6.html">6</a>
-    <a href="http://www.028studio.com/028/Questions/list_6_7.html">7</a>
-    <a class="next" href="http://www.028studio.com/028/Questions/list_6_2.html">下一页</a>
-    <a href="http://www.028studio.com/028/Questions/list_6_8.html">末页</a>
-    <span class="disabled">共 8页77条</span>
-  </div>
-</div>
-<div class="sidebar">
-  <h3 class="cat_title"><a href="http://www.028studio.com/028/CASES/" title="案例">· 案例</a></h3>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/87.html" title="四川中喻建设集团有限公司">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101233120-L.jpg" alt="四川中喻建设集团有限公司" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/87.html" title="四川中喻建设集团有限公司">四川中喻建设集团有限公司</a></h5>
-  <ul style="display: block;">
-    <a href="http://www.028studio.com/028/CASES/86.html" title="爱恋珠宝">
-      <img src="./images/1-1403101229280-L.jpg" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101229280-L.jpg" alt="爱恋珠宝" width="200" height="120" style="display: inline;"></a>
-  </ul>
-  <h5 class="on"><a href="http://www.028studio.com/028/CASES/86.html" title="爱恋珠宝">爱恋珠宝</a></h5>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/85.html" title="优筑科技住宅">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101224450-L.jpg" alt="优筑科技住宅" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/85.html" title="优筑科技住宅">优筑科技住宅</a></h5>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/83.html" title="亨利与薇薇安">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101159140-L.jpg" alt="亨利与薇薇安" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/83.html" title="亨利与薇薇安">亨利与薇薇安</a></h5>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/88.html" title="燕园考研">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101235430-L.jpg" alt="燕园考研" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/88.html" title="燕园考研">燕园考研</a></h5>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/82.html" title="金立方珠宝">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101155170-L.jpg" alt="金立方珠宝" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/82.html" title="金立方珠宝">金立方珠宝</a></h5>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/84.html" title="金丝楠乌木博物馆">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101211130-L.jpg" alt="金丝楠乌木博物馆" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/84.html" title="金丝楠乌木博物馆">金丝楠乌木博物馆</a></h5>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/79.html" title="四川方略工程管理咨询有限公司">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101122370-L.jpg" alt="四川方略工程管理咨询有限公司" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/79.html" title="四川方略工程管理咨询有限公司">四川方略工程管理咨询有限公司</a></h5>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/81.html" title="青城山味江陵园">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101151000-L.jpg" alt="青城山味江陵园" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/81.html" title="青城山味江陵园">青城山味江陵园</a></h5>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/76.html" title="红酒名庄第一品牌网中秋改版">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101054130-L.jpg" alt="红酒名庄第一品牌网中秋改版" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/76.html" title="红酒名庄第一品牌网中秋改版">红酒名庄第一品牌网中秋改版</a></h5>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/75.html" title="广田华南装饰">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140307/1-14030G422530-L.jpg" alt="广田华南装饰" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/75.html" title="广田华南装饰">广田华南装饰</a></h5>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/280.html" title="成都金汀金属制品有限公司">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140415/1-1404151I9230-L.jpg" alt="成都金汀金属制品有限公司" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/280.html" title="成都金汀金属制品有限公司">成都金汀金属制品有限公司</a></h5>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/74.html" title="婴爱成长">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140307/1-14030G406300-L.jpg" alt="婴爱成长" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/74.html" title="婴爱成长">婴爱成长</a></h5>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/77.html" title="英中财商教育咨询(成都)有限公司">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101105430-L.jpg" alt="英中财商教育咨询(成都)有限公司" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/77.html" title="英中财商教育咨询(成都)有限公司">英中财商教育咨询(成都)有限公司</a></h5>
-  <ul>
-    <a href="http://www.028studio.com/028/CASES/72.html" title="嘉盛材料有限公司">
-      <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140307/1-14030G352560-L.jpg" alt="嘉盛材料有限公司" width="200" height="120"></a>
-  </ul>
-  <h5><a href="http://www.028studio.com/028/CASES/72.html" title="嘉盛材料有限公司">嘉盛材料有限公司</a></h5>
-
-</div>
-<div class="clear"></div>
-</div>
 </section>
 </body>
 <%= render "comment/footer" %>

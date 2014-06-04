@@ -1,4 +1,6 @@
 Weixin::Application.routes.draw do
+  get "journalisms/index"
+  get "questions/index"
   root :to => "main#index"
   resources :services
   resources :abouts

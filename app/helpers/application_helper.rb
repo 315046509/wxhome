@@ -3,6 +3,10 @@ module ApplicationHelper
     datetime.strftime(" %Y年%m月%d日 %H:%M:%S")
   end
 
+  def my_time_format(datetime)
+    datetime.strftime(" %Y-%m-%d")
+  end
+
   def truncate_u(text, length = 30, truncate_string = "...")
     l=0
     char_array=text.unpack("U*")

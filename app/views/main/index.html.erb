@@ -205,42 +205,18 @@
       <h2 class="cat_title"><span><a href="<%= questions_path %>" class="more">MORE+</a></span>
         <a href="<%= questions_path %>" title="常见问题">常见问题</a>
       </h2>
-      <ul>
-        <li>
+      <% @questions.each do |q| %>
+          <ul>
+            <li>
+              <div class="newslist">
+                <a href="<%= question_path(q) %>" title="<%= q.title %>"><%= q.title %></a>
+                <span>UPTATED:<%= my_time_format q.created_at %></span>
 
-          <div class="newslist">
-            <a href="http://www.028studio.com/028/Questions/282.html" title="手机网站和普通网站有什么区别呢？">手机网站和普通网站有什么区别呢？</a>
-            <span>UPTATED:2014-04-23</span>
-
-            <p>1.访问入口不同 一般、如果你要上网、你采用的方法觉对是去网吧（相信大部分人是不是在家上网的）。但是由于手机的普及和手机上...</p>
-          </div>
-        </li>
-        <li>
-          <a href="http://www.028studio.com/028/Questions/176.html" target="_blank">
-            <img src="images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140312/13423R2Z-0-lp.jpg" width="90">
-          </a>
-
-          <div class="newslist">
-            <a href="http://www.028studio.com/028/Questions/176.html" title="微网站能做什么？">微网站能做什么？</a>
-            <span>UPTATED:2014-03-12</span>
-
-            <p>展示企业形象 微站是企业在移动互联网时代完美展示企业及品牌形象的最佳选择，表现内容丰富、实时更新、形式多样化，保证品牌形...</p>
-          </div>
-        </li>
-        <li>
-          <a href="http://www.028studio.com/028/Questions/175.html" target="_blank">
-            <img src="images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140312/13405043C-0-lp.jpg" width="90">
-          </a>
-
-          <div class="newslist">
-            <a href="http://www.028studio.com/028/Questions/175.html" title="为什么需要微站 / 微网站？">为什么需要微站 / 微网站？</a>
-            <span>UPTATED:2014-02-17</span>
-
-            <p>适合手机访问 移动互联网时代的来临，好比一场随风潜入夜，润物细无声的春雨，悄然改变着我们的生活方式，越来越多人习惯使用手...</p>
-          </div>
-        </li>
-
-      </ul>
+                <p><%= truncate_u(q.description, 60).html_safe %></p>
+              </div>
+            </li>
+          </ul>
+      <% end %>
     </div>
   </div>
   <div class="clear"></div>
