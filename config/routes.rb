@@ -1,5 +1,4 @@
 Weixin::Application.routes.draw do
-  get "main/index"
   root :to => "main#index"
   resources :services
   resources :abouts
@@ -14,7 +13,7 @@ Weixin::Application.routes.draw do
   resources :news
   #admin
   namespace :admin do
-    match '' => 'main#index', :via => :get
+    match '' => 'cases#index', :via => :get
     match '/login' => 'main#login', :via => :get
     match '/logout' => 'main#logout', :via => :get
     resources :main do
@@ -22,6 +21,12 @@ Weixin::Application.routes.draw do
         post 'check_login'
       end
     end
+    # 案例
+    resources :cases
+    # 问题
+    resources :questions
+    # 新闻
+    resources :journalisms
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

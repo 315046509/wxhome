@@ -12,7 +12,7 @@ class Admin::MainController < Admin::AdminController
     if (login_name == "admin" && password == "admin" )
       #登录成功
       do_admin_login("")
-      redirect_to admin_main_path and return
+      redirect_to admin_cases_path and return
     else
       flash[:notice] = "登录失败，请检查是否填写错误！"
       redirect_to "/admin/login"
