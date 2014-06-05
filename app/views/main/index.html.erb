@@ -69,107 +69,18 @@
 <section id="caseslist">
   <ul class="cases">
     <li>
-      <a href="http://www.028studio.com//028/Cases/" title="成都网站建设成功案例"><img src="images/icase_t.gif" alt="成都网站建设成功案例"></a>
+      <a href="<%= cases_path %>" title="成都网站建设成功案例"><img src="images/icase_t.gif" alt="成都网站建设成功案例"></a>
     </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/140520/2-14052014263E57.jpg" alt="福美来石材">
+    <% @roll.each do |roll| %>
+        <li class="item1">
+          <%= image_tag roll.avatar.url(:zhengchang) %>
+          <img src="images/case.png" data-original="http://www.028studio.com/uploads/140520/2-14052014263E57.jpg" alt="福美来石材">
 
-      <p>
-        <a href="http://www.028studio.com/028/CASES/287.html" title="福美来石材">福美来石材</a>
-      </p>
-    </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/allimg/140516/2-1405161533280-L.jpg" alt="艾团网">
-
-      <p>
-        <a href="http://www.028studio.com/028/CASES/286.html" title="艾团网">艾团网</a>
-      </p>
-    </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/allimg/140515/2-1405151G1460-L.jpg" alt="创想青年俱乐部">
-
-      <p>
-        <a href="http://www.028studio.com/028/CASES/285.html" title="创想青年俱乐部">创想青年俱乐部</a>
-      </p>
-    </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101233120-L.jpg" alt="四川中喻建设集团有限公司">
-
-      <p>
-        <a href="http://www.028studio.com/028/CASES/87.html" title="四川中喻建设集团有限公司">四川中喻建设集团有限公司</a>
-      </p>
-    </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101229280-L.jpg" alt="爱恋珠宝">
-
-      <p>
-        <a href="http://www.028studio.com/028/CASES/86.html" title="爱恋珠宝">爱恋珠宝</a>
-      </p>
-    </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101224450-L.jpg" alt="优筑科技住宅">
-
-      <p>
-        <a href="http://www.028studio.com/028/CASES/85.html" title="优筑科技住宅">优筑科技住宅</a>
-      </p>
-    </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101159140-L.jpg" alt="亨利与薇薇安">
-
-      <p>
-        <a href="http://www.028studio.com/028/CASES/83.html" title="亨利与薇薇安">亨利与薇薇安</a>
-      </p>
-    </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101235430-L.jpg" alt="燕园考研">
-
-      <p>
-        <a href="http://www.028studio.com/028/CASES/88.html" title="燕园考研">燕园考研</a>
-      </p>
-    </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101155170-L.jpg" alt="金立方珠宝">
-
-      <p>
-        <a href="http://www.028studio.com/028/CASES/82.html" title="金立方珠宝">金立方珠宝</a>
-      </p>
-    </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101211130-L.jpg" alt="金丝楠乌木博物馆">
-
-      <p>
-        <a href="http://www.028studio.com/028/CASES/84.html" title="金丝楠乌木博物馆">金丝楠乌木博物馆</a>
-      </p>
-    </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101122370-L.jpg" alt="四川方略工程管理咨询有限公司">
-
-      <p>
-        <a href="http://www.028studio.com/028/CASES/79.html" title="四川方略工程管理咨询有限公司">四川方略工程管理咨询有限公司</a>
-      </p>
-    </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101151000-L.jpg" alt="青城山味江陵园">
-
-      <p>
-        <a href="http://www.028studio.com/028/CASES/81.html" title="青城山味江陵园">青城山味江陵园</a>
-      </p>
-    </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101054130-L.jpg" alt="红酒名庄第一品牌网中秋改版">
-
-      <p>
-        <a href="http://www.028studio.com/028/CASES/76.html" title="红酒名庄第一品牌网中秋改版">红酒名庄第一品牌网中秋改版</a>
-      </p>
-    </li>
-    <li class="item1">
-      <img src="images/case.png" data-original="http://www.028studio.com/uploads/allimg/140307/1-14030G422530-L.jpg" alt="广田华南装饰">
-
-      <p>
-        <a href="http://www.028studio.com/028/CASES/75.html" title="广田华南装饰">广田华南装饰</a>
-      </p>
-    </li>
-
+          <p>
+            <a href="<%= case_path(roll) %>" title="<%= roll.title %>"><%= roll.title %></a>
+          </p>
+        </li>
+    <% end %>
   </ul>
 </section>
 <section id="news">
