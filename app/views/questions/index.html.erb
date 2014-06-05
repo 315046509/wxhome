@@ -36,11 +36,9 @@
 
     <div class="sidebar">
       <h3 class="cat_title"><a href="<%= cases_path %>" title="朋兴案例">· 案例</a></h3>
-      <ul>
-        <a href="http://www.028studio.com/028/CASES/87.html" title="四川中喻建设集团有限公司">
-          <img src="./images/gray.png" data-original="http://www.028studio.com/uploads/allimg/140310/1-1403101233120-L.jpg" alt="四川中喻建设集团有限公司" width="200" height="120"></a>
-      </ul>
-      <h5><a href="http://www.028studio.com/028/CASES/87.html" title="四川中喻建设集团有限公司">四川中喻建设集团有限公司</a></h5>
+      <% @roll.each do |roll| %>
+          <h5><a href="<%= case_path(roll) %>" title="<%= roll.title %>"><%= roll.title %></a></h5>
+      <% end %>
     </div>
     <div class="clear"></div>
   </div>

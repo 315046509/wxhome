@@ -24,7 +24,7 @@
             <%= image_tag roll.avatar.url(:zhengchang) %>
           </a>
 
-          <p><%= truncate_u(roll.content, 200) %></p>
+          <p><%= truncate_u(roll.content, 110) %></p>
           <a href="<%= case_path(roll) %>"><strong><%= roll.title %></strong>
           </a>
         </li>

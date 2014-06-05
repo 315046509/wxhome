@@ -1,4 +1,7 @@
 class ServicesController < ApplicationController
-  def index
+  def website
+  end
+
+  def marketing
   end
 end

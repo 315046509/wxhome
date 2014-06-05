@@ -1,8 +1,11 @@
 Weixin::Application.routes.draw do
-  get "journalisms/index"
-  get "questions/index"
   root :to => "main#index"
-  resources :services
+  resources :services do
+    collection do
+      get 'website'
+      get 'marketing'
+    end
+  end
   resources :abouts
   resources :cases
   resources :contact
