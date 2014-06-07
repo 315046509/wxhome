@@ -42,8 +42,8 @@
       <h3 class="cat_title">您可能感兴趣的！</h3>
       <% @journalisms.each do |q| %>
           <h5>
-            <a href="<%= news_path(q) %>" title="<%= q.title %>">
-              <%= link_to q.title, news_path(q) %>
+            <a href="<%= news_path(q) %>" title="<%= truncate_u(q.title, 15) %>">
+              <%= link_to truncate_u(q.title, 15), news_path(q) %>
             </a>
           </h5>
       <% end %>

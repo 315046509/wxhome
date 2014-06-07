@@ -43,14 +43,18 @@
             $("#verifytitle").validate({
                 rules: {
                     "question[title]": {
-                        required: true,
-                        rangelength: [1, 15]
+                        required: true
+                    },
+                    "question[description]": {
+                        required: true
                     }
                 },
                 messages: {
                     "question[title]": {
-                        required: "请填写标题",
-                        rangelength: "标题长度为1~15"
+                        required: "请填写标题"
+                    },
+                    "question[description]": {
+                        required: "请填写内容"
                     }
                 },
                 errorClass: "error",

@@ -29,7 +29,6 @@
         <tr>
           <th>ID</th>
           <th>新闻标题</th>
-          <th>新闻内容</th>
           <th>创建时间</th>
           <th>新闻详细</th>
           <th>新闻修改</th>
@@ -40,8 +39,7 @@
         <% @journalisms.each do |q| %>
             <tr>
               <td><%= q.id %></td>
-              <td><%= q.title %></td>
-              <td><%= truncate_u(q.description, 10).html_safe %></td>
+              <td><%= truncate_u(q.title, 10) %></td>
               <td class="center"><%= my_datetime_format q.created_at %></td>
               <td class="center"><%= link_to "查看", admin_journalism_path(q) %></td>
               <td><%= link_to '修改', edit_admin_journalism_path(q) %></td>

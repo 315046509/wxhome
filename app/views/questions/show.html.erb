@@ -45,7 +45,7 @@
 
 
       <% @questions.each do |q| %>
-          <h5><a href="<%= question_path(q) %>" title="<%= q.title %>"><%= q.title %></a></h5>
+          <h5><a href="<%= question_path(q) %>" title="<%= q.title %>"><%= truncate_u(q.title, 15) %></a></h5>
       <% end %>
 
     </div>

@@ -40,7 +40,7 @@
         <% @questions.each do |q| %>
             <tr>
               <td><%= q.id %></td>
-              <td><%= q.title %></td>
+              <td><%= truncate_u(q.title, 10) %></td>
               <td><%= truncate_u(q.description, 10).html_safe %></td>
               <td class="center"><%= my_datetime_format q.created_at %></td>
               <td class="center"><%= link_to "详细", admin_question_path(q) %></td>

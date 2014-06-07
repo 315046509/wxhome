@@ -44,14 +44,19 @@
             $("#verifytitle").validate({
                 rules: {
                     "journalism[title]": {
-                        required: true,
-                        rangelength: [1, 22]
+                        required: true
+                    },
+
+                    "journalism[description]": {
+                        required: true
                     }
                 },
                 messages: {
                     "journalism[title]": {
-                        required: "请填写标题",
-                        rangelength: "标题长度为1~22"
+                        required: "请填写标题"
+                    },
+                    "journalism[description]": {
+                        required: "请填写内容"
                     }
                 },
                 errorClass: "error",
