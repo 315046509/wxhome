@@ -43,24 +43,24 @@
   <ul>
     <li class="">
       <a href="<%= website_services_path %>" title="网站建设/网站设计">
-        <h3 class="website">网站建设</h3>
+        <h3 class="website">朋兴网站建设</h3>
 
-        <p>028能够帮您搭建适应各种设备及浏览器访问、针对主流搜索引擎优化、用户体验良好的网站。
+        <p>朋兴能够帮您搭建适应各种设备及浏览器访问、针对主流搜索引擎优化、用户体验良好的网站。
           深入剖析企业需求，致力于树立良好的企业品牌形象，完善企业对内外的传播需求。积极协助企业找到发展战略核心，从战略的角度树立企业的品牌形象。</p>
       </a>
     </li>
     <li>
       <a href="<%= weixin_index_path %>" title="微信公众平台开发" target="_blank">
-        <h3 class="weixin">微信 / 微站</h3>
+        <h3 class="weixin">朋兴微信 / 微站</h3>
 
         <p>做完网站就够了吗？网站推广的意义等同于广告！成千上万的同行网站，让客户立刻找到你！点击免费，提高网站在所有搜索引擎的排名</p>
       </a>
     </li>
     <li class="cur">
       <a href="<%= marketing_services_path %>" title="网站推广/网站优化">
-        <h3 class="seo">网站推广</h3>
+        <h3 class="seo">朋兴网站推广</h3>
 
-        <p>微信从2011年1月21日推出到现在短短2年多时间,用户数量达5亿.可见微信的发展速度,微信正改变我们的移动营销方式.</p>
+        <p>微信从2011年1月21日推出到现在短短3年多时间,用户数量达20亿.可见微信的发展速度,微信正改变我们的移动营销方式.</p>
       </a>
     </li>
     <li style="left: 738px;" class="arrow"></li>
@@ -70,12 +70,12 @@
 <section id="caseslist">
   <ul class="cases">
     <li>
-      <a href="<%= cases_path %>" title="成都网站建设成功案例"><img src="images/icase_t.gif" alt="成都网站建设成功案例"></a>
+      <a href="<%= cases_path %>" title="朋兴网站建设成功案例"><img src="images/icase_t.gif" alt="朋兴网站建设成功案例"></a>
     </li>
     <% @roll.each do |roll| %>
         <li class="item1">
           <%= image_tag roll.avatar.url(:zhengchang) %>
-          <img src="images/case.png" data-original="http://www.028studio.com/uploads/140520/2-14052014263E57.jpg" alt="福美来石材">
+          <img src="images/case.png" data-original="http://www.028studio.com/uploads/140520/2-14052014263E57.jpg" alt="朋兴微管家">
 
           <p>
             <a href="<%= case_path(roll) %>" title="<%= roll.title %>"><%= roll.title %></a>
@@ -100,7 +100,7 @@
     </div>
     <div id="newsbox">
       <h2 class="cat_title"><span><a href="<%= questions_path %>" class="more">MORE+</a></span>
-        <a href="<%= questions_path %>" title="常见问题">常见问题</a>
+        <a href="<%= questions_path %>" title="朋兴为您解答疑问">常见问题</a>
       </h2>
       <% @questions.each do |q| %>
           <ul>
