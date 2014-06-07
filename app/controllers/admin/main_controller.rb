@@ -9,7 +9,7 @@ class Admin::MainController < Admin::AdminController
   def check_login
     login_name = params[:login_name]
     password = params[:password]
-    if (login_name == "admin" && password == "admin" )
+    if (login_name == "admin" && password == "xx115954" )
       #登录成功
       do_admin_login("")
       redirect_to admin_cases_path and return
