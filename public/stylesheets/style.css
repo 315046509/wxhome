@@ -846,16 +846,6 @@ h1#title span {
     opacity: 0.9;
 }
 
-#service2 a {
-    display: block;
-    width: 36px;
-    height: 100px;
-    text-indent: -9999px;
-    background: url(../images/service.png) no-repeat;
-    cursor: pointer;
-    margin-bottom: 1px
-}
-
 #service2 a.mscBtn {
     height: 38px;
     background: #fff url(../images/musicBtn.gif) no-repeat

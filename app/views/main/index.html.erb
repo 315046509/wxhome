@@ -75,8 +75,6 @@
     <% @roll.each do |roll| %>
         <li class="item1">
           <%= image_tag roll.avatar.url(:zhengchang) %>
-          <img src="images/case.png" data-original="http://www.028studio.com/uploads/140520/2-14052014263E57.jpg" alt="朋兴微管家">
-
           <p>
             <a href="<%= case_path(roll) %>" title="<%= roll.title %>"><%= roll.title %></a>
           </p>
@@ -106,8 +104,10 @@
           <ul>
             <li>
               <div class="newslist">
-                <a href="<%= question_path(q) %>" title="<%= q.title %>"><%= truncate_u(q.title, 38) %></a>
+                <a href="<%= question_path(q) %>" title="<%= q.title %>"><%= truncate_u(q.title, 40) %></a>
                 <span>UPTATED:<%= my_time_format q.created_at %></span>
+
+                <p><%= truncate_u(q.description, 60).html_safe %></p>
               </div>
             </li>
           </ul>

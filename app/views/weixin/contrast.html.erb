@@ -369,9 +369,12 @@
 
 </tbody>
 </table>
+<!-- 客服 -->
+<link href="../stylesheets/lanrenzhijia.css" rel="stylesheet"/>
+<script src='../javascripts/jquery.bxSlider.min.js'></script>
+<!-- 客服end -->
 <div id="service">
-  <a class="srvCns" href="<%= contact_index_path %>" target="_blank">在线咨询</a>
-  <a class="goTop" id="goTop" title="返回顶部" style="display:none">返回顶部</a>
+  <%= render "comment/kefu" %>
 </div>
 <script type="text/javascript">
     $(window).scroll(function () {

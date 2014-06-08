@@ -429,15 +429,6 @@ div.contentWrap {
     opacity: 0.9;
 }
 
-#service a {
-    display: block;
-    width: 36px;
-    height: 100px;
-    text-indent: -9999px;
-    background: url(../images/service.png) no-repeat;
-    cursor: pointer;
-    margin-bottom: 1px
-}
 
 #service a.mscBtn {
     height: 38px;
