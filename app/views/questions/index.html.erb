@@ -20,7 +20,7 @@
             <div class="jiajianbox">
               <h4><em></em><%= link_to truncate_u(q.title, 30), question_path(q) %></h4>
               <ul style="display: block;">
-                <%= truncate_u(q.description, 30).html_safe %>
+                <%= link_to "朋兴为您解答", question_path(q) %>
               </ul>
             </div>
           </div>
