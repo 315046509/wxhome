@@ -21,8 +21,6 @@
           <span>UPTATED:<%= my_time_format @question.created_at %>
             <a href="<%= questions_path %>" title="朋兴帮您解决烦恼">返回列表</a></span>
           <%= @question.title %>
-
-          <p><%= q.description.html_safe %></p>
         </h1>
 
         <!--  分享代码   -->
@@ -36,7 +34,7 @@
 
         <div id="info">
           <div>
-            <%= truncate_u(@question.description).html_safe %>
+            <%= (@question.description).html_safe %>
           </div>
         </div>
       </article>
