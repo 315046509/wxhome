@@ -106,10 +106,10 @@
           <ul>
             <li>
               <div class="newslist">
-                <a href="<%= question_path(q) %>" title="<%= q.title %>"><%= truncate_u(q.title, 40) %></a>
+                <a href="<%= question_path(q) %>" title="<%= q.title %>"><%= truncate_u(q.title, 38) %></a>
                 <span>UPTATED:<%= my_time_format q.created_at %></span>
 
-                <p><%= truncate_u(q.description, 60).html_safe %></p>
+                <p><%= truncate_u(q.description, 100).html_safe %></p>
               </div>
             </li>
           </ul>

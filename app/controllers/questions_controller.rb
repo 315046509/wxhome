@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   def index
-    @questions = Question.order_ct_desc.page(params[:page]).per(8)
+    @questions = Question.order_ct_desc.page(params[:page]).per(10)
     @roll = Case.all.order_ct_desc.page(params[:page]).per(10)
   end
 

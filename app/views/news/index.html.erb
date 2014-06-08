@@ -18,7 +18,7 @@
           <% @journalisms.each do |q| %>
               <li>
                 <div class="newslist">
-                  <a href="<%= news_path(q) %>" title="<%= q.title %>"><%= q.title %></a>
+                  <a href="<%= news_path(q) %>" title="<%= q.title %>"><%= truncate_u(q.title, 50) %></a>
                   <span>UPTATED:<%= my_time_format q.created_at %></span>
                 </div>
                 <div class="clear"></div>

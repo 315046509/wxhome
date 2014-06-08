@@ -18,9 +18,9 @@
       <% @questions.each do |q| %>
           <div class="jiajianlist">
             <div class="jiajianbox">
-              <h4><em></em><%= link_to q.title, question_path(q) %></h4>
+              <h4><em></em><%= link_to truncate_u(q.title, 30), question_path(q) %></h4>
               <ul style="display: block;">
-                <%= truncate_u(q.description, 60).html_safe %>
+                <%= truncate_u(q.description, 30).html_safe %>
               </ul>
             </div>
           </div>
