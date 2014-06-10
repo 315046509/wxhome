@@ -1015,8 +1015,8 @@ footer {
     zoom: 1;
     *display: inline;
     position: relative;
-    width: 219px;
-    height: 132px;
+    width: 177px;
+    height: 178px;
     overflow: hidden;
     background: #fff;
     padding: 1px;
@@ -1026,8 +1026,8 @@ footer {
 }
 
 #caseslist .cases li img {
-    width: 219px;
-    height: 132px;
+    width: 180px;
+    height: 180px;
 }
 
 #caseslist .cases li a:hover {
@@ -1078,7 +1078,7 @@ footer {
     width: 209px;
     font-size: 0;
     text-indent: -9999em;
-    background: url(../images/case_hand2.png) 65px 15px no-repeat
+    background: url(../images/case_hand2.png) 40px 35px no-repeat
 }
 
 #caseslist .cases2 {
