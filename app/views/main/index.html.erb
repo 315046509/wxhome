@@ -73,12 +73,10 @@
       <a href="<%= cases_path %>" title="朋兴网站建设成功案例"><img src="../images/icase_t.gif" alt="朋兴网站建设成功案例"></a>
     </li>
     <% @roll.each do |roll| %>
-        <li class="item1">
-          <%= image_tag roll.avatar.url(:zhengchang) %>
-          <p>
-            <a href="<%= case_path(roll) %>" title="<%= roll.title %>"><%= roll.title %></a>
-          </p>
-        </li>
+        <%= image_tag roll.avatar.url(:zhengchang) %>
+        <p>
+          <a href="<%= case_path(roll) %>" title="<%= roll.title %>"><%= roll.title %></a>
+        </p>
     <% end %>
   </ul>
 </section>
