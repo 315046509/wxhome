@@ -1074,12 +1074,12 @@ footer {
     zoom: 1;
     *display: inline;
     height: 136px;
-    padding: 0 8px;
-    margin-top: 8px;
+    padding: 0 2px;
+    margin-top: 2px;
     width: 209px;
     font-size: 0;
     text-indent: -9999em;
-    background: url(../images/case_hand2.png) 65px 15px no-repeat
+    background: url(../images/case_hand2.png) 43px 5px no-repeat
 }
 
 #caseslist .cases2 {
