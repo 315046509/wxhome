@@ -66,16 +66,19 @@
     <li style="left: 738px;" class="arrow"></li>
   </ul>
 </section>
-
+<!--      案例       -->
 <section id="caseslist">
-
   <ul class="cases">
-    <a href="<%= cases_path %>" title="朋兴网站建设成功案例">
-      <img src="../images/icase_t.gif" width="360" height="180" alt="朋兴网站建设成功案例">
-    </a>
+    <li>
+      <a href="<%= cases_path %>" title="朋兴网站建设成功案例">
+        <img src="../images/icase_t.gif" alt="朋兴网站建设成功案例"></a>
+    </li>
     <% @roll.each do |roll| %>
         <li class="item1">
-          <%= image_tag roll.avatar.url(:zhengchang) %>
+          <a href="<%= case_path(roll) %>">
+            <%= image_tag roll.avatar.url(:zhengchang) %>
+          </a>
+
           <p>
             <a href="<%= case_path(roll) %>" title="<%= roll.title %>"><%= roll.title %></a>
           </p>
@@ -83,6 +86,7 @@
     <% end %>
   </ul>
 </section>
+<!--     end      -->
 <section id="news">
   <div class="newsdata">
     <div class="questionlist">

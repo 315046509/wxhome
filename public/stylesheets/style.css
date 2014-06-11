@@ -992,150 +992,26 @@ footer {
     border: 0;
 }
 
-#caseslist {
-    width: 1115px;
-    margin: 0 auto;
-    margin-top: 25px;
-}
+#caseslist{width:1115px;margin:0 auto; margin-top:25px;}
+#con #caseslist{ width:1200px; margin:0 auto;}
+#caseslist .cases {padding:0;font-size:0;position:relative; margin-left:-1px;}
+#caseslist .cases li{display:inline-block;zoom:1;*display:inline;position:relative;width:219px;height:132px;overflow:hidden;background:#fff;padding:1px;margin:0 0 1px 1px;font-size:12px;letter-spacing:normal;}
+#caseslist .cases li img{width:219px;height:132px;}
+#caseslist .cases li a:hover{text-decoration:none;}
+#caseslist .cases li p{display:none;width:209px;height:100%;padding:0 5px;background:rgba(0,0,0,0.4);position:absolute;left:2px;bottom:0;}
+#caseslist .cases li p strong{margin-top:10px;color:#000;}
+#caseslist .cases li p span{ display: inline-block;zoom: 1;font-weight: bold;color: white;height: 30px;line-height: 30px;padding: 0 8px;margin-top: 8px;}
+#caseslist .cases li p em{display:block;color:#000;margin-bottom:5px; font-size:10px;}
+#caseslist .cases li p a{display:inline-block;zoom:1;*display:inline;height:136px;padding:0 8px;margin-top:8px; width:209px;font-size:0; text-indent:-9999em; background:url(../images/case_hand2.png) 65px 15px no-repeat}
 
-#con #caseslist {
-    width: 1200px;
-    margin: 0 auto;
-}
+#caseslist .cases2{padding:0;font-size:0;letter-spacing:-6px; width:1200px;margin:0 auto;position:relative;}
+#caseslist .cases2 li{display:inline-block;zoom:1;*display:inline;width:350px;height:380px;overflow:hidden;background:#fff;padding:10px;margin:0 14px 15px 14px;font-size:12px;letter-spacing:normal; border:1px solid #dddddd}
+#caseslist .cases2 li img{width:350px;height:210px;}
+#caseslist .cases2 li a:hover{text-decoration:none;}
+#caseslist .cases2 li p{width:350px;height:125px; line-height:22px; display:block; overflow:hidden; border-bottom:1px solid #dddddd; color:#636363;}
+#caseslist .cases2 li strong{margin-top:10px; color:#636363; font-size:14px; line-height:40px;}
 
-#caseslist .cases {
-    padding: 0;
-    font-size: 0;
-    position: relative;
-    margin-left: -1px;
-}
-
-#caseslist .cases li {
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-    position: relative;
-    width: 177px;
-    height: 178px;
-    overflow: hidden;
-    background: #fff;
-    padding: 1px;
-    margin: 0 0 1px 1px;
-    font-size: 12px;
-    letter-spacing: normal;
-}
-
-#caseslist .cases li img {
-    width: 180px;
-    height: 180px;
-}
-
-#caseslist .cases li a:hover {
-    text-decoration: none;
-}
-
-#caseslist .cases li p {
-    display: none;
-    width: 209px;
-    height: 100%;
-    padding: 0 5px;
-    background: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    left: 2px;
-    bottom: 0;
-}
-
-#caseslist .cases li p strong {
-    margin-top: 10px;
-    color: #000;
-}
-
-#caseslist .cases li p span {
-    display: inline-block;
-    zoom: 1;
-    font-weight: bold;
-    color: white;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 8px;
-    margin-top: 8px;
-}
-
-#caseslist .cases li p em {
-    display: block;
-    color: #000;
-    margin-bottom: 5px;
-    font-size: 10px;
-}
-
-#caseslist .cases li p a {
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-    height: 136px;
-    padding: 0 8px;
-    margin-top: 8px;
-    width: 209px;
-    font-size: 0;
-    text-indent: -9999em;
-    background: url(../images/case_hand2.png) 40px 35px no-repeat
-}
-
-#caseslist .cases2 {
-    padding: 0;
-    font-size: 0;
-    letter-spacing: -6px;
-    width: 1200px;
-    margin: 0 auto;
-    position: relative;
-}
-
-#caseslist .cases2 li {
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-    width: 350px;
-    height: 380px;
-    overflow: hidden;
-    background: #fff;
-    padding: 10px;
-    margin: 0 14px 15px 14px;
-    font-size: 12px;
-    letter-spacing: normal;
-    border: 1px solid #dddddd
-}
-
-#caseslist .cases2 li img {
-    width: 350px;
-    height: 210px;
-}
-
-#caseslist .cases2 li a:hover {
-    text-decoration: none;
-}
-
-#caseslist .cases2 li p {
-    width: 350px;
-    height: 125px;
-    line-height: 22px;
-    display: block;
-    overflow: hidden;
-    border-bottom: 1px solid #dddddd;
-    color: #636363;
-}
-
-#caseslist .cases2 li strong {
-    margin-top: 10px;
-    color: #636363;
-    font-size: 14px;
-    line-height: 40px;
-}
-
-.case_logo {
-    width: 1117px;
-    margin: 40px auto;
-}
-
+.case_logo{ width:1117px; margin:40px auto;}
 /*SubPage caseDetailed*/
 #show_cases {
     margin-top: 30px;
