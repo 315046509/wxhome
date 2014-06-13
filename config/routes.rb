@@ -1,6 +1,9 @@
 Weixin::Application.routes.draw do
+  resources :mains
+
   mount Ckeditor::Engine => '/ckeditor'
   root :to => "main#index"
+  resources :mains
   resources :services do
     collection do
       get 'website'

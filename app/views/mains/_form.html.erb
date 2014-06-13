@@ -1,0 +1,32 @@
+<%= form_for(@main) do |f| %>
+    <% if @main.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@main.errors.count, "error") %> prohibited this main from being saved:</h2>
+
+          <ul>
+            <% @main.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label  "名字" %>
+      <br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label "电话" %>
+      <br>
+      <%= f.text_field :tel %>
+    </div>
+    <div class="field">
+      <%= f.label "地址" %>
+      <br>
+      <%= f.text_field :address %>
+    </div>
+    <div class="actions">
+      <%= f.submit "提交" %>
+    </div>
+<% end %>
