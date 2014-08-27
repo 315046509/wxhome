@@ -1,5 +1,14 @@
 Weixin::Application.routes.draw do
   resources :mains
+  resources :cccabouts do
+    collection do
+      get 'disclaimer'
+      get 'privacy'
+      get 'job'
+      get 'contact'
+      get 'links'
+    end
+  end
 
   mount Ckeditor::Engine => '/ckeditor'
   root :to => "main#index"
