@@ -1,0 +1,29 @@
+<div>
+  <ul class="breadcrumb">
+    <li>
+      <a href=#">Home</a> <span class="divider">/</span>
+    </li>
+    <li>
+      <a href="<%= admin_jobs_path %>">招聘信息管理</a> <span class="divider">/</span>
+    </li>
+    <li>
+      招聘信息
+    </li>
+  </ul>
+</div>
+<div class="row-fluid sortable">
+  <div class="box span12">
+    <div class="box-content">
+      <p>
+        招聘标题：<%= @job.title %>
+      </p><br/>
+
+      <p>
+        招聘内容：<%= @job.description.html_safe %>
+      </p>
+
+      <br/><br/>
+    </div>
+  </div>
+  <!--/span-->
+</div><!--/row-->

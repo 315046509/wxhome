@@ -45,6 +45,10 @@ Weixin::Application.routes.draw do
     resources :questions
     # 新闻
     resources :journalisms
+    # 长春车生活招聘
+    resources :jobs
+    # 长春车生活招商
+    resources :cccshs
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
